@@ -1,0 +1,19 @@
+.main{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 25%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    background-color: rgb(175, 219, 190);
+}
+.parent{
+    background-image: url("/assets/img/booknow.jpg");
+    height: 120%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

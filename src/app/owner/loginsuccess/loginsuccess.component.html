@@ -1,0 +1,38 @@
+
+   <div class="main">
+    <div class="btns">
+        <button type="button" class="btn btn-dark"(click)="back()">Back</button>
+        <button type="button" class="btn btn-success"(click)="newHotelRegister()">Hotel Registration</button>
+        <button type="button" class="btn btn-warning"(click)="viewMyHotelList()">View My Hotel list</button>
+        <button type="button" class="btn btn-info"(click)="viewAllHotelList()">View All Hotel List</button>
+    </div><br>
+   </div>
+
+    <div *ngIf = "this.hotelDetailsByOwner.length !=0">
+        <div class="serach-bar-container">
+            <!-- <input class="inpbox" type="text"[(ngModel)]="inputBoxValue" placeholder="Search Hotels Detail here..."> -->
+           
+        </div>
+
+<div>
+    <table>
+        <tr>
+            <th *ngFor = "let heading of tableHeadings ">{{heading}}</th>
+        </tr>
+        <tr *ngFor = "let hotelData of this.hotelDetailsByOwner  ">
+            <td>{{hotelData.ownerName}}</td>
+            <td>{{hotelData.hotelName}}</td>
+            <td>{{hotelData.hotelMobile}}</td>
+            <td>{{hotelData.hotelAddress}}</td>
+            <td>{{hotelData.hotelMenu}}</td>
+            <td>{{hotelData.pancard}}</td>
+            <td>{{hotelData.city}}</td>
+            <td>{{hotelData.numberOfRooms}}</td>
+            <td>{{hotelData.noOfEmployes}}</td>
+            <td>{{hotelData.acceptTerms}}</td>
+            <td > <i class="material-icons" (click)="delete(hotelData.id)">delete</i></td>
+            <td> <i class="material-icons" (click)="edit(hotelData.id)">edit</i></td>
+
+        </tr>
+    </table>
+</div>

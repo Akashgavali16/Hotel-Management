@@ -1,0 +1,33 @@
+<div class="nav">
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>&nbsp;
+    <input class="inpbox" type="text"[(ngModel)]="inputBoxValue" placeholder="Search Hotel Details here..."><br><br>
+</div><br>
+
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let heading of tableHeadings">{{ heading }}</th>
+            <th *ngIf="endpoint=='admin'">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let hotelsData of hotelDetails | searchtext : inputBoxValue ">
+            <td>{{hotelsData.ownerName}}</td>
+            <td>{{hotelsData.hotelName}}</td>
+            <td>{{hotelsData.hotelMobile}}</td>
+            <td>{{hotelsData.hotelAddress}}</td>
+            <td>{{hotelsData.hotelMenu}}</td>
+            <td>{{hotelsData.pancard}}</td>
+            <td>{{hotelsData.city}}</td>
+            <td>{{hotelsData.numberOfRooms}}</td>
+            <td>{{hotelsData.noOfEmployes}}</td>
+
+           <td *ngIf="endpoint=='admin'"><button mat-raised-button color="accent"(click)="delete(hotelsData.id)">Delete</button></td>
+           <td *ngIf = "endpoint == 'owner' || 'user'"><button mat-raised-button color="accent" (click)="bookNow()">Book Now</button></td>
+
+          
+           
+    </tbody>
+</table><br>
+

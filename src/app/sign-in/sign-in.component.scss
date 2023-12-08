@@ -1,0 +1,52 @@
+.loginform{
+    text-align: center;
+    margin : auto;
+    height: 50%;
+    width: 30%;
+    position: relative;
+    top:50px;
+    border: 1px solid black;
+    background-color: rgb(241, 196, 98);
+    border-radius: 10px ;
+}
+mat-form-field {
+    padding: 10px;
+    width: 90%;
+}
+mat-raised-button {
+    width: 80%;
+}
+.main {
+    background-image: url("../../assets/img/signin.webp");
+    height: 130%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.my-custom-snackbar {
+    margin: 0 !important;
+    position: absolute;
+    right: 25px;
+    bottom:100px;
+  }
+  .snakBarcss
+  .mat-dialog-container {
+    bottom:100px;
+   position: absolute;
+}
+.custom-snackbar {
+    background-color: #aad5db;
+    color: #fff;
+  }
+
+
+  .navbar {
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    padding: 4px;
+}
+
+div.navbar button {
+    margin-left: 3px;
+}

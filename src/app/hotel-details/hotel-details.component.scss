@@ -1,0 +1,36 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+   
+  }
+ 
+  tr:hover{
+    background-color: rgb(185, 215, 185);
+  }
+  .inpbox{
+    width: 500px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 250px;
+    text-align: center;
+
+    
+  }
+  .nav {
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    padding: 4px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+div.nav button {
+    margin-left: 3px;
+}

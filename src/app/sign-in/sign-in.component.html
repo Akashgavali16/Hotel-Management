@@ -1,0 +1,33 @@
+<div class="main">
+
+  <div class="navbar">
+    <button type="button" class="btn btn-info" (click)="back()"> Back</button>
+  </div>
+
+  <form class="loginform" [formGroup]="loginform" autocomplete="off">
+    <h2>Login Form </h2>
+
+    <mat-form-field>
+      <mat-label>UserName</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="loginform.get('name')?.touched && loginform.get('name')?.errors?.['required']">Name is
+        Required</mat-error>
+      <mat-error *ngIf="loginform.get('name')?.errors?.['minlength']">minimun 2 charactors Required</mat-error>
+      <mat-error *ngIf="loginform.get('name')?.errors?.['pattern']">Please Enter Alphabets Only</mat-error>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password">
+      <mat-error *ngIf="loginform.get('password')?.touched && loginform.get('password')?.errors?.['required']">Please
+        Enter Password</mat-error>
+    </mat-form-field>
+    <br>
+
+    <button mat-raised-button color="primary" [disabled]="loginform.invalid" (click)="submit()">Submit</button><br><br>
+    Don't have an Account?<a routerLink="/signup">Click Here</a>
+
+  </form>
+
+</div>

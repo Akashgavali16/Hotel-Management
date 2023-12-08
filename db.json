@@ -1,0 +1,133 @@
+{
+  "admin": [
+    {
+      "name": "akash",
+      "mobile": 9075152207,
+      "Password": "akash123",
+      "confirmPassword": "akash123",
+      "TnC": true,
+      "gender": "male",
+      "email": "akash@gmail.com",
+      "city": "pune",
+      "id": 1
+    },
+    {
+      "name": "viraj",
+      "mobile": 8978675678,
+      "Password": "viraj123",
+      "confirmPassword": "viraj123",
+      "TnC": true,
+      "gender": "male",
+      "email": "viraj@gmail.com",
+      "city": "pune",
+      "id": 2
+    }
+  ],
+  "owner": [
+    {
+      "name": "nilesh",
+      "mobile": 8978675645,
+      "Password": "nilesh123",
+      "confirmPassword": "nilesh123",
+      "TnC": true,
+      "gender": "male",
+      "email": "nilesh@gmail.com",
+      "city": "pune",
+      "id": 1
+    },
+    {
+      "name": "rajesh",
+      "mobile": 8767566778,
+      "Password": "rajesh123",
+      "confirmPassword": "rajesh123",
+      "TnC": true,
+      "gender": "male",
+      "email": "rajesh@gmail.com",
+      "city": "pune",
+      "id": 2
+    },
+    {
+      "name": "mmm",
+      "mobile": 7564589769,
+      "Password": "mmmm123",
+      "confirmPassword": "mmmm123",
+      "TnC": true,
+      "gender": "male",
+      "email": "gbgjdngjkdfng",
+      "city": "vfgbfg",
+      "id": 3
+    }
+  ],
+  "user": [
+    {
+      "name": "akash",
+      "mobile": 9075152207,
+      "Password": "akash123",
+      "confirmPassword": "akash123",
+      "TnC": true,
+      "gender": "male",
+      "email": "akash@gmail.com",
+      "city": "pune",
+      "id": 1
+    },
+    {
+      "name": "komal",
+      "mobile": 8978675678,
+      "Password": "komal123",
+      "confirmPassword": "komal123",
+      "TnC": true,
+      "gender": "male",
+      "email": "komal@gmail.com",
+      "city": "pune",
+      "id": 2
+    },
+    {
+      "name": "pppp",
+      "mobile": 5646756876,
+      "Password": "pppp123",
+      "confirmPassword": "pppp123",
+      "TnC": true,
+      "gender": "male",
+      "email": "gbfgbdfg",
+      "city": "vrgb",
+      "id": 3
+    }
+  ],
+  "hotelDetails": [
+    {
+      "ownerName": "nilesh",
+      "hotelName": "Nilesh INN",
+      "hotelMobile": "9076787889",
+      "hotelAddress": "mumbai.thane",
+      "hotelMenu": "Pizza",
+      "pancard": "CCDDF1234F",
+      "city": "Mumbai",
+      "numberOfRooms": "15",
+      "noOfEmployes": "30",
+      "acceptTerms": true,
+      "id": 1
+    }
+  ],
+  "hotelBooking": [
+    {
+      "name": "nilesh",
+      "address": "mumbai.thane",
+      "mobileNo": "9890876567",
+      "checkInn": "10:00AM",
+      "checkOut": "5:00Pm",
+      "date": "2023-09-17T18:30:00.000Z",
+      "payment": "2000",
+      "id": 1
+    },
+    {
+      "name": "komal",
+      "address": "mumbai.thane",
+      "mobileNo": "9890876567",
+      "checkInn": "11:00AM",
+      "checkOut": "5:00PM",
+      "date": "2023-09-19T18:30:00.000Z",
+      "payment": "2000",
+      "id": 2
+    }
+  ]
+}

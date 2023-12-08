@@ -1,0 +1,125 @@
+<div class="parent">
+    
+<button mat-raised-button color="primary" routerLink="/owner/loginsuccess">Back</button>
+<div class="main">
+   
+    <form [formGroup]="hotelRegistrationForm">
+        <h2>Register Your Hotel</h2>
+
+        <mat-form-field>
+            <mat-label for=" Owner name"> Owner Name:</mat-label>
+            <input matInput type="text" class="form-control" placeholder=" OwnerName" formControlName="ownerName">
+            <mat-icon matSuffix> person_outline </mat-icon>
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('ownerName')?. touched && hotelRegistrationForm.get('ownerName')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+            <mat-error class="errorMsg" *ngIf="hotelRegistrationForm.get('ownerName')?.errors?.['minlength'] "> Minimum
+                5
+                Charactors required</mat-error>
+        </mat-form-field><br>
+
+
+        <mat-form-field>
+            <mat-label for="Hotel Name">Hotel Name:</mat-label>
+            <input matInput type="text" class="form-control" placeholder="Hotel Name" formControlName="hotelName">
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('hotelName')?. touched && hotelRegistrationForm.get('hotelName')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+            <mat-error class="errorMsg" *ngIf="hotelRegistrationForm.get('hotelName')?.errors?.['minlength'] "> Minimum
+                5
+                Charactors required</mat-error>
+        </mat-form-field><br>
+
+
+        <mat-form-field>
+            <mat-label for="Hotel Contact No">Hotel Contact No:</mat-label>
+            <input matInput type="text" formControlName="hotelMobile" class="form-control" placeholder="Phone number">
+            <mat-icon matSuffix> smartphone </mat-icon>
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('hotelMobile')?. touched && hotelRegistrationForm.get('hotelMobile')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+            <mat-error class="errorMsg" *ngIf="hotelRegistrationForm.get('hotelMobile')?.errors?.['maxlength'] ">
+                Maximum
+                10 digits are Allow</mat-error>
+            <mat-error class="errorMsg" *ngIf="hotelRegistrationForm.get('hotelMobile')?.errors?.['pattern'] "> please
+                enter Valid Format </mat-error>
+        </mat-form-field><br>
+
+
+
+        <mat-form-field>
+            <mat-label for="phone">Hotel Address:</mat-label>
+            <textarea matInput placeholder="Address" formControlName="hotelAddress"></textarea>
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('hotelAddress')?. touched && hotelRegistrationForm.get('hotelAddress')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+        </mat-form-field><br>
+
+        <mat-form-field>
+            <mat-label for="phone">Hotel Menu:</mat-label>
+            <textarea matInput placeholder="hotelMenu" formControlName="hotelMenu"></textarea>
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('hotelMenu')?. touched && hotelRegistrationForm.get('hotelMenu')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+        </mat-form-field><br>
+
+
+        <mat-form-field>
+            <mat-label for="pancard">Pancard No:</mat-label>
+            <input matInput type="pancard" formControlName="pancard" class="form-control" placeholder=" eg.ABCTY1234D">
+            <mat-hint class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('pancard')?. touched && hotelRegistrationForm.get('pancard')?.errors?.['required']">
+                This field is mandatory.</mat-hint>
+            <mat-hint class="errorMsg" *ngIf="hotelRegistrationForm.get('pancard')?.errors?.['pattern'] "> please enter
+                Valid Format </mat-hint>
+        </mat-form-field><br>
+
+        <mat-form-field>
+            <mat-label for="city">City:</mat-label>
+            <mat-select formControlName="city">
+                <mat-option value="Pune">Pune</mat-option>
+                <mat-option value="Mumbai">Mumbai</mat-option>
+                <mat-option value="Delhi">Delhi</mat-option>
+            </mat-select>
+        </mat-form-field><br>
+
+
+        <mat-form-field>
+            <mat-label for="numberofrooms">Number Of Rooms:</mat-label>
+            <input matInput type="text" class="form-control" placeholder="No. of rooms" formControlName="numberOfRooms">
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('numberOfRooms')?. touched && hotelRegistrationForm.get('numberOfRooms')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+            <mat-error class="errorMsg" *ngIf="hotelRegistrationForm.get('numberOfRooms')?.errors?.['pattern'] "> please
+                enter Valid Format </mat-error>
+        </mat-form-field><br>
+
+
+        <mat-form-field>
+            <mat-label for="noOfEmployes">Number Of Employes:</mat-label>
+            <input matInput type="text" class="form-control" placeholder="No.of employes"
+                formControlName="noOfEmployes">
+            <mat-error class="errorMsg"
+                *ngIf="hotelRegistrationForm.get('noOfEmployes')?. touched && hotelRegistrationForm.get('noOfEmployes')?.errors?.['required']  ">
+                This field is mandatory.</mat-error>
+            <mat-error class="errorMsg" *ngIf="hotelRegistrationForm.get('noOfEmployes')?.errors?.['pattern'] "> please
+                enter Valid Format </mat-error>
+        </mat-form-field><br>
+
+
+
+        <div class="login">
+            <mat-checkbox formControlName="acceptTerms"></mat-checkbox>
+            I agree to the Terms And Conditions <br>
+        </div><br>
+
+    
+
+        <button *ngIf="!isEditJourney" mat-raised-button color="warn" [disabled]="!hotelRegistrationForm.valid"  (click)="submit()">Submit</button>
+        <button *ngIf="isEditJourney" mat-raised-button color="warn" [disabled]="!hotelRegistrationForm.valid"  (click)="submit()">Update</button>
+
+
+    </form>
+</div>
+
+</div>

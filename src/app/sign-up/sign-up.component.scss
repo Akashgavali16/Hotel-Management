@@ -1,0 +1,40 @@
+.signupform {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 15px;
+    background-color: rgb(221, 231, 234);
+}
+
+mat-form-field {
+    padding: 2px;
+    width: 80%;
+}
+
+mat-radio-group {
+    width: 50%;
+    text-align: center;
+}
+
+.navbar {
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    padding: 4px;
+}
+
+div.navbar button {
+    margin-left: 3px;
+}
+
+.main {
+    background-image: url("../../assets/img/signin.webp");
+    height: 130%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

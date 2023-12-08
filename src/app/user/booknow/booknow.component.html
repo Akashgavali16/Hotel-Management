@@ -1,0 +1,87 @@
+<div class="parent">
+   <button  type="button" class="btn btn-warning" routerLink="/user/loginsuccess">Back</button>
+<div class="main">
+<form  [formGroup]="hotelBookNowForm">
+   <h2>BOOK YOURS HOTEL</h2>
+
+    <mat-form-field>
+        <mat-label>UserName</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="hotelBookNowForm.get('name')?.touched && hotelBookNowForm.get('name')?.errors?.['required']">Name is
+          Required</mat-error>
+        <mat-error *ngIf="hotelBookNowForm.get('name')?.errors?.['minlength']">minimun 2 charactors Required</mat-error>
+   </mat-form-field><br>
+
+      <mat-form-field>
+        <mat-label>Address:</mat-label>
+        <input matInput formControlName="address">
+        <mat-error *ngIf="hotelBookNowForm.get('address')?.touched && hotelBookNowForm.get('address')?.errors?.['required']">Address is
+          Required</mat-error>
+        <mat-error *ngIf="hotelBookNowForm.get('address')?.errors?.['minlength']">minimun 10 charactors Required</mat-error>
+     </mat-form-field><br>
+
+     <mat-form-field>
+        <mat-label>MobileNo:</mat-label>
+        <input matInput formControlName="mobileNo">
+        <mat-error *ngIf="hotelBookNowForm.get('mobileNo')?.touched && hotelBookNowForm.get('mobileNo')?.errors?.['required']">MobileNo is Required</mat-error>
+        <mat-error *ngIf="hotelBookNowForm.get('mobileNo')?.errors?.['minlength']">minimum lenght is 10</mat-error>
+        <mat-error *ngIf="hotelBookNowForm.get('mobileNo')?.errors?.['maxlength']">maxlenght lenght is 10</mat-error>
+     </mat-form-field><br>
+
+     <mat-form-field>
+        <mat-label>Check INN:</mat-label>
+        <input matInput formControlName="checkInn" placeholder="eg.10:00AM">
+        <mat-error *ngIf="hotelBookNowForm.get('checkInn')?.touched && hotelBookNowForm.get('checkInn')?.errors?.['required']">Check INN time is Required</mat-error>
+        <!-- <mat-error *ngIf="hotelBookNowForm.get('checkInn')?.errors?.['minlength']">minimum lenght is 1</mat-error>
+        <mat-error *ngIf="hotelBookNowForm.get('checkInn')?.errors?.['maxlength']">maxlenght lenght is 7</mat-error> -->
+     </mat-form-field><br>
+
+   
+
+     <mat-form-field>
+        <mat-label>Check OUT:</mat-label>
+        <input matInput formControlName="checkOut" placeholder="eg.10:00PM">
+        <mat-error *ngIf="hotelBookNowForm.get('checkOut')?.touched && hotelBookNowForm.get('checkOut')?.errors?.['required']">Check Out time is Required</mat-error>
+        <!-- <mat-error *ngIf="hotelBookNowForm.get('checkOut')?.errors?.['minlength']">minimum lenght is 1</mat-error>
+        <mat-error *ngIf="hotelBookNowForm.get('checkOut')?.errors?.['maxlength']">maxlenght lenght is 7</mat-error> -->
+     </mat-form-field><br>
+
+     <!-- <mat-form-field>
+        <mat-label>Date:</mat-label>
+        <input  type="date" matInput formControlName="date" placeholder="DD/MM/MMMM">
+        <mat-error *ngIf="hotelBookNowForm.get('date')?.touched && hotelBookNowForm.get('date')?.errors?.['required']">Date is Required</mat-error>
+    </mat-form-field><br> -->
+
+ 
+    <mat-form-field style="width: 210px;">
+      <mat-label>Date:</mat-label>
+      <input matInput [matDatepicker]="myDatepicker" formControlName="date" placeholder="Choose a date">
+      <mat-error *ngIf="hotelBookNowForm.get('date')?.touched && hotelBookNowForm.get('date')?.errors?.['required']">Date is Required</mat-error>
+      <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+      <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field><br>
+  
+
+    <mat-form-field>
+        <mat-label>Payment:</mat-label>
+        <input matInput formControlName="payment" placeholder="Pay booking Charges 1000 rs">
+        <mat-error *ngIf="hotelBookNowForm.get('payment')?.touched && hotelBookNowForm.get('payment')?.errors?.['required']">Payment is Required</mat-error>
+    </mat-form-field><br>
+<!-- 
+    <label>Menues</label><br>
+    <mat-radio-group formControlName="Menues">
+       <mat-checkbox *ngFor="let Menu of Menues" 
+       (change)="setMenues($event,Menu.option )" [checked]="Menu.isActive" 
+       [value]="Menu.value">{{Menu.option}}</mat-checkbox>
+    </mat-radio-group><br>
+
+    <mat-checkbox formControlName="TC" value="terms and conditions" (change)="tcValue($event)">terms and
+      conditions</mat-checkbox> -->
+
+    
+    <button mat-raised-button color="warn" [disabled]="hotelBookNowForm.invalid" (click)="submit()">Submit</button>
+    
+</form>
+
+</div>
+</div>
